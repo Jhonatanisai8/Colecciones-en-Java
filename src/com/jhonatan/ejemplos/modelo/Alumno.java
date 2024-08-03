@@ -1,6 +1,6 @@
 package com.jhonatan.ejemplos.modelo;
 
-public class Alumno {
+public class Alumno implements Comparable<Alumno> {
     private String nombre;
     private int nota;
 
@@ -31,5 +31,13 @@ public class Alumno {
     @Override
     public String toString() {
         return "Alumno [nombre=" + nombre + ", nota=" + nota + "]";
+    }
+
+    @Override
+    public int compareTo(Alumno o) {
+        if (this.nombre == null) {
+            return 0;
+        }
+        return this.nombre.compareTo(o.nombre);
     }
 }
