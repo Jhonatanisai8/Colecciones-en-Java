@@ -35,9 +35,20 @@ public class Alumno implements Comparable<Alumno> {
 
     @Override
     public int compareTo(Alumno o) {
-        if (this.nombre == null) {
+        // if (this.nombre == null) {
+        // return 0;
+        // }
+        // // ordena por nombre
+        // return this.nombre.compareTo(o.nombre);
+        if (this.nota == o.nota) {
             return 0;
         }
-        return this.nombre.compareTo(o.nombre);
+
+        if (this.nota > o.nota) {
+            return 1;
+        } else {
+            return -1;
+        }
+
     }
 }
