@@ -6,11 +6,11 @@ import com.jhonatan.ejemplos.modelo.Alumno;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("\t==TreeSet de Alumnos==");
-
+        ejemploAlumnosTreeSet();
     }
 
     public static void ejemploAlumnosTreeSet() {
+        System.out.println("\t==TreeSet de Alumnos==");
         Set<Alumno> sa = new TreeSet<>();
         sa.add(new Alumno("Pato", 5));
         sa.add(new Alumno("Cata", 6));
@@ -23,6 +23,7 @@ public class App {
     }
 
     public static void ejemploAlumnosHashSet() {
+        System.out.println("\t==HashSet de Alumnos==");
         Set<Alumno> sa = new HashSet<>();
         sa.add(new Alumno("Pato", 5));
         sa.add(new Alumno("Cata", 6));
