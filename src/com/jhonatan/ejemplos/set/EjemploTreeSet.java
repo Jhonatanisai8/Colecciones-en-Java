@@ -14,7 +14,7 @@ public class EjemploTreeSet {
     public static void ejemplo() {
 
         System.out.println("\t==Ejemplo TreeSet==");
-        Set<String> ts = new TreeSet<>();
+        Set<String> ts = new TreeSet<>(); 
         ts.add("uno");
         ts.add("dos");
         ts.add("tres");
