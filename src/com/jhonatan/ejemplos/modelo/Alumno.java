@@ -2,12 +2,12 @@ package com.jhonatan.ejemplos.modelo;
 
 public class Alumno implements Comparable<Alumno> {
     private String nombre;
-    private int nota;
+    private Integer nota;
 
     public Alumno() {
     }
 
-    public Alumno(String nombre, int nota) {
+    public Alumno(String nombre, Integer nota) {
         this.nombre = nombre;
         this.nota = nota;
     }
@@ -20,11 +20,11 @@ public class Alumno implements Comparable<Alumno> {
         this.nombre = nombre;
     }
 
-    public int getNota() {
+    public Integer getNota() {
         return nota;
     }
 
-    public void setNota(int nota) {
+    public void setNota(Integer nota) {
         this.nota = nota;
     }
 
@@ -40,15 +40,19 @@ public class Alumno implements Comparable<Alumno> {
         // }
         // // ordena por nombre
         // return this.nombre.compareTo(o.nombre);
-        if (this.nota == o.nota) {
+
+        // ordena por nota
+        // if (this.nota == o.nota) {
+        // return 0;
+        // }
+        // if (this.nota > o.nota) {
+        // return 1;
+        // } else {
+        // return -1;
+        // }
+        if (this.nota.equals(null)) {
             return 0;
         }
-
-        if (this.nota > o.nota) {
-            return 1;
-        } else {
-            return -1;
-        }
-
+        return this.nota.compareTo(o.nota);
     }
 }
