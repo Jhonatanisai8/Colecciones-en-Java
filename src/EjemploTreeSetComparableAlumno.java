@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -9,7 +10,8 @@ public class EjemploTreeSetComparableAlumno {
     public static void main(String[] args) throws Exception {
         // ejemploAlumnosTreeSet();
         // ejemploAlumnosTreeSetComparto();
-        iterarTreeSetConExpresionesLamda();
+        // iterarTreeSetConExpresionesLamda();
+        ejemploOrdenarTreset();
     }
 
     public static void iterarTreeSetConExpresionesLamda() {
@@ -117,5 +119,31 @@ public class EjemploTreeSetComparableAlumno {
         sa.add(new Alumno("Zeus", 2));
 
         System.out.println(sa);
+    }
+
+    public static void ejemploOrdenarTreset() {
+        System.out.println("\t==TreeSet de Alumnos==");
+        // Set<Alumno> sa = new TreeSet<>();
+        /*
+         * ordenamos de forma descente
+         * se quita el reserve para la forma ascendente
+         */
+        Set<Alumno> sa = new TreeSet<>(Comparator.comparing(Alumno::getNota).reversed());
+
+        sa.add(new Alumno("Pato", 5));
+        sa.add(new Alumno("Cata", 6));
+        sa.add(new Alumno("Luci", 4));
+        sa.add(new Alumno("Jano", 7));
+        sa.add(new Alumno("Andrez", 3));
+        sa.add(new Alumno("Zeus2", 2));
+        sa.add(new Alumno("Zeus", 2));
+        sa.add(new Alumno("Lucas", 2));
+        sa.add(new Alumno("Lucas", 3));
+
+        System.out.println("=Iterando usando Stream Foreach=");
+        // sa.forEach(a -> System.out.println(a));
+        // sa.forEach(a -> System.out.println(a.getNombre()));
+
+        sa.forEach(System.out::println);
     }
 }
