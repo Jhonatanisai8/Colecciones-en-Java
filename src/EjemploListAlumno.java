@@ -58,9 +58,8 @@ public class EjemploListAlumno {
         System.out.println("\n\t=Iterando con for normal=");
         for (int i = 0; i < sa.size(); i++) {
             Alumno a = sa.get(i);
-            System.out.println(i+": "+a.getNombre());
+            System.out.println(i + ": " + a.getNombre());
         }
     }
-
 
 }
