@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -16,20 +17,32 @@ public class EjemploTreeSetComparableAlumno {
 
         // agregamos alumnos
         // objetos para que se puedan agregar deben implementar la interface comparable
+
         sa.add(new Alumno("Pato", 5));
         sa.add(new Alumno("Cata", 6));
         sa.add(new Alumno("Luci", 4));
         sa.add(new Alumno("Jano", 7));
         sa.add(new Alumno("Andrez", 3));
+        sa.add(new Alumno("Zeus2", 2));
         sa.add(new Alumno("Zeus", 2));
         sa.add(new Alumno("Lucas", 2));
-        sa.add(new Alumno("Zeus", 2));
+        sa.add(new Alumno("Lucas", 3));
 
         /* no permite repetidos */
-        /* forma de iterarar */
-        System.out.println("=Iterando un foreach=");
+        System.out.println("=Iterando con foreach=");
         for (Alumno alumno : sa) {
+            // System.out.println(alumno.toString());
             System.out.println(alumno.getNombre());
+        }
+
+        System.out.println("=Iterando while y un iterator=");
+        Iterator<Alumno> iterator = sa.iterator();
+
+        while (iterator.hasNext()) {
+            Alumno a = iterator.next();
+            // System.out.println(a);
+            System.out.println(a.getNombre() + " => Nota: " + a.getNota());
+
         }
     }
 
@@ -48,11 +61,26 @@ public class EjemploTreeSetComparableAlumno {
         sa.add(new Alumno("Luci", 4));
         sa.add(new Alumno("Jano", 7));
         sa.add(new Alumno("Andrez", 3));
+        sa.add(new Alumno("Zeus2", 2));
         sa.add(new Alumno("Zeus", 2));
-        sa.add(new Alumno("Zeus", 12));
+        sa.add(new Alumno("Lucas", 2));
+        sa.add(new Alumno("Lucas", 3));
 
+        /* no permite repetidos */
+        System.out.println("=Iterando con foreach=");
         for (Alumno alumno : sa) {
-            System.out.println(alumno.toString());
+            // System.out.println(alumno.toString());
+            System.out.println(alumno.getNombre());
+        }
+
+        System.out.println("=Iterando while y un iterator=");
+        Iterator<Alumno> iterator = sa.iterator();
+
+        while (iterator.hasNext()) {
+            Alumno a = iterator.next();
+            // System.out.println(a);
+            System.out.println(a.getNombre() + " => Nota: " + a.getNota());
+
         }
     }
 
