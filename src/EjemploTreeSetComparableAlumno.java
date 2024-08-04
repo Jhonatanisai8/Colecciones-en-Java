@@ -6,8 +6,8 @@ import com.jhonatan.ejemplos.modelo.Alumno;
 
 public class EjemploTreeSetComparableAlumno {
     public static void main(String[] args) throws Exception {
-        ejemploAlumnosTreeSet();
-        // ejemploAlumnosTreeSetComparto();
+        // ejemploAlumnosTreeSet();
+        ejemploAlumnosTreeSetComparto();
     }
 
     public static void ejemploAlumnosTreeSet() {
@@ -22,9 +22,9 @@ public class EjemploTreeSetComparableAlumno {
         sa.add(new Alumno("Jano", 7));
         sa.add(new Alumno("Andrez", 3));
         sa.add(new Alumno("Zeus", 2));
-        sa.add(new Alumno("Zeus", 2));
+        sa.add(new Alumno("Lucas", 2));
 
-        /*no permite repetidos */
+        /* no permite repetidos */
         for (Alumno alumno : sa) {
             System.out.println(alumno.toString());
         }
@@ -36,7 +36,9 @@ public class EjemploTreeSetComparableAlumno {
         // se pude cambiar el orden en que queremos ordenar
         // Set<Alumno> sa = new TreeSet<>((a, b) ->
         // (b.getNombre().compareTo(a.getNombre())));
-        Set<Alumno> sa = new TreeSet<>((a, b) -> (b.getNota().compareTo(a.getNota())));
+
+        /*no muestra repetidos de acuerdo al parametro del comparTo */
+        Set<Alumno> sa = new TreeSet<>((a, b) -> (b.getNombre().compareTo(a.getNombre())));
 
         sa.add(new Alumno("Pato", 5));
         sa.add(new Alumno("Cata", 6));
@@ -44,8 +46,11 @@ public class EjemploTreeSetComparableAlumno {
         sa.add(new Alumno("Jano", 7));
         sa.add(new Alumno("Andrez", 3));
         sa.add(new Alumno("Zeus", 2));
+        sa.add(new Alumno("Zeus", 12));
 
-        System.out.println(sa);
+        for (Alumno alumno : sa) {
+            System.out.println(alumno.toString());
+        }
     }
 
     public static void ejemploAlumnosHashSet() {
