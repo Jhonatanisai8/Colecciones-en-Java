@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
+import static java.util.Comparator.comparing;
 import java.util.List;
 
 import com.jhonatan.ejemplos.modelo.Alumno;
@@ -92,7 +92,7 @@ public class EjemploListComparableComparatorAlumno {
         /*listaAlumnos.sort(Comparator.comparing((Alumno a) -> a.getNombre()).reversed()); */
 
         /*listaAlumnos.sort(Comparator.comparing(Alumno::getNota).reversed());  */
-        listaAlumnos.sort(Comparator.comparing((Alumno a) -> a.getNombre()).reversed());
+        listaAlumnos.sort(comparing((Alumno a) -> a.getNombre()).reversed());
         System.out.println("\n\t=Lista ordenada por Nombre=");
         // sa.forEach(a -> System.out.println(a));
         listaAlumnos.forEach(a -> System.out.println(a.getNombre() + " - Nota: " + a.getNota()));
