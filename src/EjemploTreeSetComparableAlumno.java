@@ -7,8 +7,28 @@ import com.jhonatan.ejemplos.modelo.Alumno;
 
 public class EjemploTreeSetComparableAlumno {
     public static void main(String[] args) throws Exception {
-        ejemploAlumnosTreeSet();
+        // ejemploAlumnosTreeSet();
         // ejemploAlumnosTreeSetComparto();
+        iterarTreeSetConExpresionesLamda();
+    }
+
+    public static void iterarTreeSetConExpresionesLamda() {
+        System.out.println("\t==TreeSet de Alumnos==");
+        Set<Alumno> sa = new TreeSet<>();
+        sa.add(new Alumno("Pato", 5));
+        sa.add(new Alumno("Cata", 6));
+        sa.add(new Alumno("Luci", 4));
+        sa.add(new Alumno("Jano", 7));
+        sa.add(new Alumno("Andrez", 3));
+        sa.add(new Alumno("Zeus2", 2));
+        sa.add(new Alumno("Zeus", 2));
+        sa.add(new Alumno("Lucas", 2));
+        sa.add(new Alumno("Lucas", 3));
+
+        System.out.println("=Iterando usando Stream Foreach=");
+        // sa.forEach(a -> System.out.println(a));
+        sa.forEach(a -> System.out.println(a.getNombre()));
+
     }
 
     public static void ejemploAlumnosTreeSet() {
