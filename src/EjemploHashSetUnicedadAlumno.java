@@ -21,7 +21,7 @@ public class EjemploHashSetUnicedadAlumno {
         sa.add(new Alumno("Jano", 7));
         sa.add(new Alumno("Andrez", 3));
         sa.add(new Alumno("Zeus", 2));
-        sa.add(new Alumno("Zeus", 2));
+        sa.add(new Alumno("Zeus", 3));
 
         /* no permite repetidos */
         for (Alumno alumno : sa) {
