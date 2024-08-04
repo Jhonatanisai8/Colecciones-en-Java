@@ -1,4 +1,4 @@
-import java.util.Comparator;
+import static java.util.Comparator.comparing;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -128,7 +128,7 @@ public class EjemploTreeSetComparableAlumno {
          * ordenamos de forma descente
          * se quita el reserve para la forma ascendente
          */
-        Set<Alumno> sa = new TreeSet<>(Comparator.comparing(Alumno::getNota).reversed());
+        Set<Alumno> sa = new TreeSet<>(comparing(Alumno::getNombre).reversed());
 
         sa.add(new Alumno("Pato", 5));
         sa.add(new Alumno("Cata", 6));
