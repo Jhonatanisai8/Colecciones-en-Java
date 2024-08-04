@@ -6,8 +6,8 @@ import com.jhonatan.ejemplos.modelo.Alumno;
 
 public class EjemploTreeSetComparableAlumno {
     public static void main(String[] args) throws Exception {
-        // ejemploAlumnosTreeSet();
-        ejemploAlumnosTreeSetComparto();
+        ejemploAlumnosTreeSet();
+        // ejemploAlumnosTreeSetComparto();
     }
 
     public static void ejemploAlumnosTreeSet() {
@@ -23,10 +23,13 @@ public class EjemploTreeSetComparableAlumno {
         sa.add(new Alumno("Andrez", 3));
         sa.add(new Alumno("Zeus", 2));
         sa.add(new Alumno("Lucas", 2));
+        sa.add(new Alumno("Zeus", 2));
 
         /* no permite repetidos */
+        /* forma de iterarar */
+        System.out.println("=Iterando un foreach=");
         for (Alumno alumno : sa) {
-            System.out.println(alumno.toString());
+            System.out.println(alumno.getNombre());
         }
     }
 
@@ -37,7 +40,7 @@ public class EjemploTreeSetComparableAlumno {
         // Set<Alumno> sa = new TreeSet<>((a, b) ->
         // (b.getNombre().compareTo(a.getNombre())));
 
-        /*no muestra repetidos de acuerdo al parametro del comparTo */
+        /* no muestra repetidos de acuerdo al parametro del comparTo */
         Set<Alumno> sa = new TreeSet<>((a, b) -> (b.getNombre().compareTo(a.getNombre())));
 
         sa.add(new Alumno("Pato", 5));
