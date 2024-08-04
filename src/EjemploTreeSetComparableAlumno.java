@@ -27,7 +27,9 @@ public class EjemploTreeSetComparableAlumno {
 
         System.out.println("=Iterando usando Stream Foreach=");
         // sa.forEach(a -> System.out.println(a));
-        sa.forEach(a -> System.out.println(a.getNombre()));
+        // sa.forEach(a -> System.out.println(a.getNombre()));
+
+        sa.forEach(System.out::println);
 
     }
 
