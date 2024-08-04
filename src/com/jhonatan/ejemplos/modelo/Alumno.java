@@ -35,11 +35,11 @@ public class Alumno implements Comparable<Alumno> {
 
     @Override
     public int compareTo(Alumno o) {
-        // if (this.nombre == null) {
-        // return 0;
-        // }
-        // // ordena por nombre
-        // return this.nombre.compareTo(o.nombre);
+        if (this.nombre == null) {
+            return 0;
+        }
+        // ordena por nombre
+        return this.nombre.compareTo(o.nombre);
 
         // ordena por nota
         // if (this.nota == o.nota) {
@@ -50,10 +50,10 @@ public class Alumno implements Comparable<Alumno> {
         // } else {
         // return -1;
         // }
-        if (this.nota.equals(null)) {
-            return 0;
-        }
-        return this.nota.compareTo(o.nota);
+        // if (this.nota.equals(null)) {
+        // return 0;
+        // }
+        // return this.nota.compareTo(o.nota);
     }
 
     @Override
@@ -89,5 +89,4 @@ public class Alumno implements Comparable<Alumno> {
 
     /* */
 
-    
 }
