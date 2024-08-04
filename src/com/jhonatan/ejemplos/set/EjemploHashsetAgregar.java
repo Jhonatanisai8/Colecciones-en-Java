@@ -13,10 +13,6 @@ public class EjemploHashsetAgregar {
         // ejemploArrayList();
     }
 
-    public static void ejemploHashSet() {
-        HashSet<String> hs = new HashSet<>();
-    }
-
     public static void ejemploHashSetSet() {
 
         // esta estructura de datos no permite elementos duplicados

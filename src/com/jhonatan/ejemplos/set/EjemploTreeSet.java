@@ -6,15 +6,15 @@ import java.util.TreeSet;
 
 public class EjemploTreeSet {
     public static void main(String[] args) {
-        // ejemplo();
-        // ejemploInteger();
+        ejemplo();
+        ejemploInteger();
         ejemploOrdenar();
     }
 
     public static void ejemplo() {
-
+        /* TreeSet no permite elementos repetidos */
         System.out.println("\t==Ejemplo TreeSet==");
-        Set<String> ts = new TreeSet<>(); 
+        Set<String> ts = new TreeSet<>();
         ts.add("uno");
         ts.add("dos");
         ts.add("tres");
@@ -36,14 +36,14 @@ public class EjemploTreeSet {
         ts.add(3);
         ts.add(9);
 
-        // mantiene el orden
+        // muestra en forma ascendente
         System.out.println(ts);
 
     }
 
     public static void ejemploOrdenar() {
 
-        System.out.println("\t==Ejemplo TreeSet==");
+        System.out.println("\t==Ejemplo TreeSet Descendente==");
         // damos el vuelva al ordenamiento : descente
         // Set<String> ts = new TreeSet<>((a, b) -> b.compareTo(a));
         // otra forma
@@ -55,7 +55,7 @@ public class EjemploTreeSet {
         ts.add("cuatro");
         ts.add("cinco");
 
-        // mantiene el orden
+        // muestra en forma descendente
         System.out.println(ts);
 
     }
