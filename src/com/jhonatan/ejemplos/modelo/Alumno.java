@@ -79,11 +79,11 @@ public class Alumno implements Comparable<Alumno> {
                 return false;
         } else if (!nombre.equals(other.nombre))
             return false;
-        // if (nota == null) {
-        // if (other.nota != null)
-        // return false;
-        // } else if (!nota.equals(other.nota))
-        // return false;
+        if (nota == null) {
+            if (other.nota != null)
+                return false;
+        } else if (!nota.equals(other.nota))
+            return false;
         return true;
     }
 
