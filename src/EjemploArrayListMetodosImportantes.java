@@ -33,8 +33,8 @@ public class EjemploArrayListMetodosImportantes {
 
         System.out.println("\n\t=Lista modificada=");
         /* para eliminar un objeto del arrayslits */
-        listaAlumnos.remove(new Alumno("Jano", 7));
-        
+        listaAlumnos.remove(new Alumno("Jano", 79));
+
         System.out.println();
 
         /* mostramos de nuevo la lista */
