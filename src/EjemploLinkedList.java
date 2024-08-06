@@ -1,11 +1,14 @@
 import java.util.LinkedList;
+import java.util.ListIterator;
 
 import com.jhonatan.ejemplos.modelo.Alumno;
 
 public class EjemploLinkedList {
     public static void main(String[] args) {
         System.out.println("\n\t==METODOS DE UNA LinkedList==");
-        ejemploLinkedList();
+        // ejemploLinkedList();
+        ejemploListIterator();
+
     }
 
     public static void ejemploLinkedList() {
@@ -95,6 +98,36 @@ public class EjemploLinkedList {
 
         System.out.println("=====================================");
 
+    }
+
+    public static void ejemploListIterator() {
+        LinkedList<Alumno> listAlumnos = new LinkedList<>();
+        System.out.println("Tamño inicial: " + listAlumnos.size());
+        System.out.println("¿Esta vacia? " + listAlumnos.isEmpty());
+        listAlumnos.add(new Alumno("Pato", 5));
+        listAlumnos.add(new Alumno("Cata", 6));
+        listAlumnos.add(new Alumno("Luci", 4));
+        listAlumnos.add(new Alumno("Jano", 7));
+        listAlumnos.add(new Alumno("Andres", 3));
+
+        listAlumnos.forEach(a -> System.out.println(a.getNombre() + ", Nota: " + a.getNota()));
+
+        System.out.println("Tamño : " + listAlumnos.size());
+
+        System.out.println("\n\t=Iterando con listIterator=");
+
+        ListIterator<Alumno> enlaAlumnos = listAlumnos.listIterator();
+
+        while (enlaAlumnos.hasNext()) {
+            Alumno li = enlaAlumnos.next();
+            System.out.println(li);
+        }
+        System.out.println("====================================");
+        System.out.println("\n\t=En forma invertida=");
+        while (enlaAlumnos.hasPrevious()) {
+            Alumno alumno = enlaAlumnos.previous();
+            System.out.println(alumno);
+        }
 
     }
 }
